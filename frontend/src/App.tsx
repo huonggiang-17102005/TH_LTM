@@ -1,9 +1,10 @@
-import { Sprite } from "@/components/ui/Sprite"
+import RegisterPage from "@/pages/login/RegisterPage"
 
 export default function App() {
   return (
-    <div className="p-8">
-      <Sprite id="castle" scale={4} />
-    </div>
+    <RegisterPage
+      onGoToLogin={() => console.log("Bấm chuyển sang đăng nhập")}
+      onRegister={(user, pass) => console.log("Đăng ký với:", user, pass)}
+    />
   )
 }
